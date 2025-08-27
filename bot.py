@@ -13,7 +13,7 @@ EMAIL    = 'info@poland-service.com'
 PASSWORD = 'mshAl561'
 LOGIN_PAGE   = 'https://bilety.mhk.pl/uzytkownik/login.html'
 TICKETS_PAGE = 'https://bilety.mhk.pl/rezerwacja/termin.html?idg=0&idw=2&data=2025-11-14'
-DUMMY_EMPTY_TICKETS_PAGE = 'https://bilety.mhk.pl/rezerwacja/termin.html?idg=0&data=2025-11-24&idw=2&id_jezyka=0'
+DUMMY_EMPTY_TICKETS_PAGE = 'https://bilety.mhk.pl/rezerwacja/termin.html?idg=0&data=2025-11-26&idw=2&id_jezyka=0'
 
 driver = webdriver.Chrome()
 
@@ -37,8 +37,6 @@ def login():
 login()
 
 
-
-
 try_count = 0
 refresh_page = DUMMY_EMPTY_TICKETS_PAGE
 btns = None
@@ -53,7 +51,7 @@ while not found:
         print('Couldn\'t find offers. Refreshing')
         try_count += 1
 
-        # if try_count == 10:     #test z przejsciem na inna strone
+        # if try_count == 5:     #test z przejsciem na inna strone
         #     refresh_page = TICKETS_PAGE
     else:
         found = True
@@ -61,7 +59,7 @@ while not found:
 btns_available = []
 bts_locked     = []
 
-for btn in btns:
+for btn in btns: #michu: 10.30, 11.00, 12.30
     btn_class = btn.get_attribute('class')
     if 'button-dis' in btn_class:
         bts_locked.append(btn)
