@@ -53,8 +53,8 @@ while not found:
         print('Couldn\'t find offers. Refreshing')
         try_count += 1
 
-        if try_count == 10:     #test z przejsciem na inna strone
-            refresh_page = TICKETS_PAGE
+        # if try_count == 10:     #test z przejsciem na inna strone
+        #     refresh_page = TICKETS_PAGE
     else:
         found = True
 
