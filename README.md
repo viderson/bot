@@ -11,7 +11,7 @@ Bot automatyzujący rezerwację biletów na stronie MHK (np. Fabryka Schindlera)
 
 ---
 
-## 🔹 1. Sklonuj repozytorium lub rozpakuj ZIP
+## 🔹 1. Komendy po koleji w dowolnym folderze
 ```bash
 git clone <https://github.com/viderson/bot>
 cd bot
