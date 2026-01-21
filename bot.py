@@ -9,8 +9,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 
 
-EMAIL    = 'info@poland-service.com'
-PASSWORD = 'mshAl561'
+EMAIL    = 'email'
+PASSWORD = 'haslo'
 LOGIN_PAGE   = 'https://bilety.mhk.pl/uzytkownik/login.html'
 TICKETS_PAGE = 'https://bilety.mhk.pl/rezerwacja/termin.html?idg=0&idw=2&data=2025-11-14'
 DUMMY_EMPTY_TICKETS_PAGE = 'https://bilety.mhk.pl/rezerwacja/termin.html?idg=0&data=2025-11-26&idw=2&id_jezyka=0'
